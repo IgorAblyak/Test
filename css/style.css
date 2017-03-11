@@ -1,0 +1,67 @@
+
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  max-width: 1400px;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: 'Roboto', Tahoma, sans-serif;
+  font-size: 15px;
+  color: #354343;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header-top {
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.logo > img, .logo > span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo > span {
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.contacts {
+  float: right;
+  margin-top: 15px;
+  text-align: right;
+}
+
+.user-block {
+  padding-left: 30px;
+  font-size: 15px;
+  line-height: 21px;
+  margin-bottom: 14px;
+}
+
+.phone {
+  text-align: right;
+}
+
+.feedback {
+  font-size: 13px;
+  line-height: 19px;
+  text-decoration-style: dashed;
+  color: #354343;
+}
+
