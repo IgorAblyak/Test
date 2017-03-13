@@ -17,10 +17,13 @@ body {
   background-color: #fff;
 }
 
-h2 { font-size: 48px; }
+h2 { 
+  font-size: 48px;
+  line-height: 90px;
+}
 
 .container {
-  max-width: 1170px;
+  width: 1170px;
   margin: 0 auto;
 }
 
@@ -145,6 +148,7 @@ h2 { font-size: 48px; }
   display: none;
   border: 1px solid #e8e8e8;
   border-top: 2px solid #72b13a;
+  box-shadow: 0 13px 40px rgba(53, 67, 67, 0.1);
 }
 
 .sub-menu a {
@@ -232,11 +236,9 @@ input[type="search"] {
 
 .content-txt {
   position: relative;
-  top: 62px;
-  left: 108px;
+  top: 170px;
+  left: 30px;
   z-index: 10;
-  width: 600px;
-  color: #fff;
 }
 
 .content-txt h2, .content-txt p {
@@ -244,8 +246,6 @@ input[type="search"] {
   color: #354343;
   text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
 }
-
-.content-txt p { margin-top: 22px; }
 
 .image {
   width: 1400px;
@@ -256,8 +256,6 @@ input[type="search"] {
 .image img {
   width: 100%;
   height: 100%;
- /* filter: brightness(80%);
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);*/
 }
 
 
@@ -266,7 +264,7 @@ input[type="search"] {
 .switch {
   position: absolute;
   bottom: 20px;
-  z-index: 99;
+  z-index: 20;
   left: 50%;
   height: 10px;
   transform: translateX(-50%);
@@ -296,9 +294,10 @@ input[type="search"] {
 /*Slider end*/
 
 .series {
-  width: 570px;
-  height: 145px;
-  margin-top: 50px;
+  position: relative;
+  width: 568px;
+  height: 143px;
+  margin-top: 60px;
   border: 1px solid #e8e8e8;
 }
 
@@ -307,9 +306,43 @@ input[type="search"] {
 .home { float: right; }
 
 .series h3 {
+  position: absolute;
+  left: 20px;
+  top: -10px;
+  margin-top: -5px;
   padding-left: 10px;
   padding-right: 10px;
+  font: 24px/24px "Open sans", Tahoma, sans-serif;
   background-color: #ffffff;
+}
+
+.series p {
+  margin: 30px 0 17px 30px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.series a {
+  margin-left: 30px;
+  line-height: 24px;
+  color: #354343;
+  text-decoration: none;
+}
+
+.series a:after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: url(../img/arrow.png) no-repeat;
+  transform: translate(100%, -25%);
+}
+
+.series img {
+  position: absolute;
+  z-index: 30;
+  bottom: 0;
+  right: 42px;
 }
 
 .btn {
