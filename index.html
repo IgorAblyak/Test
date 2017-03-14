@@ -7,19 +7,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 767px)">
   </head>
   <body>
     <header class="main-header">
       <div class="container">
         <div class="header-top clearfix">
-          <div class="logo">
+          <h1 class="logo">
             <img src="img/logo.png" alt="Логотип">
             <span>Ремодулятор матрикса кожи</span>
-          </div>
+          </h1>
           <div class="contacts">
-            <div class="user-block">
-              <a href="#">Кабинет косметолога</a>
-            </div>
+            <a href="#" class="user-block">Кабинет косметолога</a>
             <span class="phone">+7 (812) 313-00-90</span><br>
             <a href="#" class="feedback">Написать нам</a>
           </div>
@@ -28,13 +27,16 @@
       <div class="header-bottom">
         <div class="container">
           <nav class="main-menu">
-            <ul>
+          <div class="mobile-menu">
+            <span class="line"></span>
+          </div>
+            <ul class="menu-block">
                 <li><a href="index.html">О марке</a></li>
                 <li><a href="#">Академия</a></li>
-                <li><a href="#" class="menu-item-active">Наша продукция</a>
+                <li><a href="#">Наша продукция</a>
                   <ul class="sub-menu">
-                    <li><a href="#" class="menu-item-active">Профессиональная серия</a></li>
-                    <li><a href="#" class="menu-item-active">Домашняя серия</a></li>
+                    <li><a href="#">Профессиональная серия</a></li>
+                    <li><a href="#">Домашняя серия</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Акции</a></li>
@@ -51,6 +53,11 @@
       </div>
     </header>
     <main>
+      <div class="content-mobile">
+        <h2>Философия<br>G-Derm</h2>
+        <p>Замедляя внутренние источники старения, мы помогаем<br>женщинам выглядеть, чувствовать и жить молодо.</p>
+        <a href="#" class="btn">Подробнее</a>
+      </div>
       <!-- Slider -->
       <div class="slider-cut">
         <div class="slider-content">
@@ -65,7 +72,7 @@
               </div>
             </div>
             <div class="image">
-              <img src="img/slider-image.jpg" width="1400" height="560" alt="G-DERM">
+              <img src="img/slider-image.jpg" alt="G-DERM">
             </div>
           </div>
           <div class="slider-item">
@@ -79,7 +86,7 @@
               </div>
             </div>
             <div class="image">
-              <img src="img/slider-image.jpg" width="1400" height="560" alt="G-DERM">
+              <img src="img/slider-image.jpg" alt="G-DERM">
             </div>
           </div>
           <div class="slider-item">
@@ -93,7 +100,7 @@
               </div>
             </div>
             <div class="image">
-              <img src="img/slider-image.jpg" width="1400" height="560" alt="G-DERM">
+              <img src="img/slider-image.jpg" alt="G-DERM">
             </div>
           </div>
         </div>
@@ -110,17 +117,26 @@
           <h3>Профессиональная серия</h3>
           <p>Только для использования профессиональными<br>косметологами после получения сертификата<br>в нашем учебном центре.</p>
           <a href="#">Перейти в каталог</a>
-          <img src="img/bg-bottle.png" width="89" height="243" alt="Жидкость">
+          <img src="img/bg-bottle.png" alt="Жидкость">
         </section>
         <section class="series home">
           <h3>Домашняя серия</h3>
           <p>Те же препараты, но в меньшей концентрации.<br>Для использования дома в перерывах между<br>салонными процедурами.</p>
           <a href="#">Перейти в каталог</a>
-          <img src="img/bg-tube.png" width="100" height="254" alt="Мазь">
+          <img src="img/bg-tube.png" alt="Мазь">
         </section>
       </div>
     </main>
     <!--[if IE 9]><script type="text/javascript" src="https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js"></script><![endif]-->
     <script type="text/javascript" src="js/slider.js"></script>
+    <script>
+      var mobileMenu = document.querySelector (".mobile-menu");
+      var mainMenu = document.querySelector (".menu-block");
+
+      mobileMenu.addEventListener ("click", function(event){
+        event.preventDefault();
+        mainMenu.classList.toggle ("show");
+      });
+    </script>
   </body>
 </html>

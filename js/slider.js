@@ -42,7 +42,7 @@ function changePosition(link) {
 var timeoutID;
 
 function startTimer() {
-    timeoutID = window.setInterval(nextItem, 50000);
+    timeoutID = window.setInterval(nextItem, 7500);
 }
 startTimer();
 
